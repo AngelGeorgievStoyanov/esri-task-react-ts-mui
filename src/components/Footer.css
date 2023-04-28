@@ -1,0 +1,12 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #0072fffa;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-h5 {
+    color: white;
+}
