@@ -1,13 +1,23 @@
 import { FC } from "react";
-import './Footer.css';
-
-
+import { BottomNavigation } from '@mui/material';
+import { Typography } from "@mui/material";
 
 const Footer: FC = () => {
     return (
-        <footer className="footer">
-            <h5 className="footer-h5">Esri Bulgaria - Task for Front End Geospatial Developer. Angel Stoyanov</h5>
-        </footer>
+        <BottomNavigation sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            backgroundColor: '#0072fffa',
+            height: '50px',
+            alignItems: 'center',
+            justifyContent: 'center'
+        }}>
+
+            <Typography variant="subtitle1" sx={{ color: 'white' }}>
+
+                Esri Bulgaria - Task for Front End Geospatial Developer. Angel Stoyanov
+            </Typography>
+        </BottomNavigation>
     )
 }
 

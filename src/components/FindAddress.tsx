@@ -1,6 +1,5 @@
 import { BaseSyntheticEvent, FC, ReactElement } from "react";
-import './FindAddress.css';
-import { Box, Button,  TextField, Typography } from "@mui/material";
+import { Box, Button, List, ListItemButton, ListItemText, TextField, Typography } from "@mui/material";
 
 interface FindAddressProps {
 
@@ -22,8 +21,8 @@ const FindAddress: FC<FindAddressProps> = ({ onHandleSubmit, onHandleChange, fin
             border: 'solid 1px', padding: '20px',
             backgroundColor: '#d1dcdc',
             boxShadow: '2px 2px 4px black',
-            marginBottom: '10px'
-
+            margin: '10px',
+            '@media(max-width: 530px)': { display: 'flex', width: '65%' }
         }} onSubmit={onHandleSubmit} >
 
 
@@ -37,7 +36,19 @@ const FindAddress: FC<FindAddressProps> = ({ onHandleSubmit, onHandleChange, fin
 
             </Box>
 
-            {(findAddresses !== undefined) ? findAddresses.map((x: any) => <li className='form-li-suggestion' key={x.text} onClick={handleClickSuggestion}>{x.text}</li>) : ''}
+            {(findAddresses !== undefined) ?
+
+                <List>
+                    {findAddresses.map((x: any) =>
+                        <ListItemButton>
+                            <ListItemText onClick={handleClickSuggestion} primary={x.text} />
+                        </ListItemButton>
+                    )
+                    }</List>
+
+
+
+                : ''}
 
         </Box >
     )
