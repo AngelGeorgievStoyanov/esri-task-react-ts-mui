@@ -2,7 +2,7 @@
 # GitHub https://github.com/AngelGeorgievStoyanov/esri-task-react-ts-mui
 ## Author: Angel Stoyanov
 ### Technologies used:
-* React-TypeSript
+* React-TypeScript
 * MUI
 
 ### Functionality
