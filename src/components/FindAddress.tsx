@@ -6,7 +6,7 @@ interface FindAddressProps {
     onHandleSubmit: (e: BaseSyntheticEvent) => Promise<void>,
     onHandleChange: (e: BaseSyntheticEvent) => Promise<void>,
     findAddresses: string[] | undefined,
-    handleClickSuggestion: any
+    handleClickSuggestion: (e: React.MouseEvent<HTMLSpanElement>) => void
 
 }
 
@@ -39,9 +39,9 @@ const FindAddress: FC<FindAddressProps> = ({ onHandleSubmit, onHandleChange, fin
             {(findAddresses !== undefined) ?
 
                 <List>
-                    {findAddresses.map((x: any) =>
-                        <ListItemButton>
-                            <ListItemText onClick={handleClickSuggestion} primary={x.text} />
+                    {findAddresses.map((x: any, i) =>
+                        <ListItemButton key={x.text}>
+                            <ListItemText onClick={handleClickSuggestion} primary={x.text} key={i} />
                         </ListItemButton>
                     )
                     }</List>

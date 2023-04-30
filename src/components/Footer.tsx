@@ -1,10 +1,10 @@
 import { FC } from "react";
-import { BottomNavigation } from '@mui/material';
+import {  Box } from '@mui/material';
 import { Typography } from "@mui/material";
 
 const Footer: FC = () => {
     return (
-        <BottomNavigation sx={{
+        <Box sx={{
             display: 'flex',
             flexDirection: 'column',
             backgroundColor: '#0072fffa',
@@ -17,7 +17,7 @@ const Footer: FC = () => {
 
                 Esri Bulgaria - Task for Front End Geospatial Developer. Angel Stoyanov
             </Typography>
-        </BottomNavigation>
+        </Box>
     )
 }
 

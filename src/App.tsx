@@ -28,8 +28,7 @@ const App: FC = () => {
     const address = formData.get('address');
 
 
-    if (address !== null && (typeof address === 'string')) {
-
+    if (typeof address === "string" && address.trim() !== "") {
       await arcgisService.findAddress(address).then((data) => {
 
         let x = data.candidates[0].location.x;
@@ -71,7 +70,7 @@ const App: FC = () => {
   };
 
 
-  const handleClickSuggestion = (e: BaseSyntheticEvent<object, any, any>) => {
+  const handleClickSuggestion = (e: React.MouseEvent) => {
     const seggestion = e.target as HTMLLIElement;
     const input = document.getElementsByTagName('input')[0];
     input.value = seggestion.innerText;
