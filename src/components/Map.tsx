@@ -86,7 +86,12 @@ const Map: FC<MapProps> = ({ center, zoom, longitude, latitude }): ReactElement 
 
 
     return (
-        <Box ref={MapEl} sx={{ width: '75%', height: '400px', margin: '10px', padding: '0', border: 'solid 1px black', boxShadow: '2px 2px 4px black' }}>
+        <Box ref={MapEl} sx={{
+            width: '75%', height: '400px',
+            margin: '10px', padding: '0',
+            border: 'solid 1px black',
+            boxShadow: '2px 2px 4px black'
+        }}>
 
         </Box>
     );
